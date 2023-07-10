@@ -1,7 +1,8 @@
 const express = require('express')
 const app = express()
-const PORT = 5000
+const PORT = 5200
 
+app.set("json spaces", 2)
 app.use(express.json())
 
 // array to store snippets
@@ -59,5 +60,5 @@ app.get('/snippet/:id', (req, res) => {
 
 // start the server
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`)
+  console.log(`Server is running on port http://localhost:${PORT}`)
 })
